@@ -1,6 +1,11 @@
 FROM hashicorp/terraform:1.0.8
-RUN apk update && apk upgrade 
+ENV GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
+ENV AWS_DEFAULT_REGION = "us-east-1"
+ENV ANSIBLE_HOST_KEY_CHECKING = "False"
+ENV AWS_MAX_ATTEMPTS=100000
 
+RUN apk update && apk upgrade 
+.0.8
 RUN apk --update --no-cache add \
         ca-certificates \
         git \
