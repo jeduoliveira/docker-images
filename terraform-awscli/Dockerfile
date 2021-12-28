@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM hashicorp/terraform:1.0.8
 ENV GIT_SSH_COMMAND = "ssh -o StrictHostKeyChecking=no"
 ENV AWS_DEFAULT_REGION = "us-east-1"
